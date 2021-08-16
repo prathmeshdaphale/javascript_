@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>tip Calculator</title>
+    <style>
+        *{ margin: 0%; padding: 0; box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+    
+        body{height: 100vh;
+            background-image:url(https://wallpapercave.com/wp/WFVW6lw.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;}
+        div{max-width: 300px;height: auto;
+            background-color: coral;
+            padding: 15px;
+            box-shadow: 1px 1px 15px 3px yellow;
+            text-align: left;}
+        h1{
+            margin-bottom: 10px ;
+            text-shadow: 1px 1px 15px 3px red;
+            text-transform: capitalize;
+            text-align: center;}
+        label{display: block;
+            text-transform: capitalize;
+            margin-top: 30px;margin-bottom: 10px;
+            color:firebrick;}
+        input{width: 250px;padding: 10px 0;}
+        select{width: 250px;padding: 10px 0;}   
+
+        button{border-radius: 10px;
+            width: 250px;
+            padding: 15px 50px;
+            font-size: 0.8rem;
+            text-transform: capitalize;
+            border: none;
+            color: silver;
+            background-color: slateblue;
+            box-shadow: 1px 1px 5px 1px violet;
+            margin-top: 20px;}
+        p{display: block;padding: 10px 10px;
+            text-transform: capitalize;
+            margin-top: 15px;margin-bottom: 10px;
+            color:firebrick;
+            text-align: center;
+            box-shadow: 1px 1px 10px 1px black;}
+        h5, small{display: block;padding: 2px 0;
+            text-transform: capitalize;
+            margin-top: 15px;margin-bottom: 10px;
+            color:rgba(52, 109, 18, 0.993);
+            text-align: center;
+            font-size: 20px;}
+        span{padding: 2px 0;
+            box-shadow: 1px 1px 5px 1px rgb(109, 27, 58);}
+            /* box-shadow: 1px 1px 10px 1px black;} */
+    </style>
+</head>
+<body>
+    
+    <div><h1>TIP CALCULATOR</h1>
+        <label for="bill amount">Enter Your Bill Amount:</label>
+        <input type="text" name="bill amount" id="tot_bill"><br>
+
+        <label for="">How was the service:</label>
+        <select id="service" name="service">
+            <option  value="0.2" >Excellent-20%</option>
+            <option  value="0.1">Medium-10%</option>
+            <option  value="0.05">Not-good-5%</option>
+        </select><br>
+
+        <label for="bill share">How Many People Are Sharing The Bill:</label>
+        <input type="text" name="bill share" id="bill_share"><br>
+        
+        <button onclick="calculation()">Calculate</button>
+        <p> Tip Amount</p> 
+        <span><h5 id="tip_out"> 0.0</h5>
+        <small id="each">Each</small></span>
+          
+    </div>
+    <script src="new.js"></script>
+</body>
+</html>
